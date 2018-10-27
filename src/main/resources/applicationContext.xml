@@ -12,6 +12,7 @@
     <bean id="myFortuneService"
           class="com.dawidspring.demo.MyFortuneService">
     </bean>
+
     <bean id="randomFortuneService"
           class="com.dawidspring.demo.RandomFortune">
     </bean>
@@ -21,11 +22,7 @@
           class="com.dawidspring.demo.FootballCoach">
     </bean>
 
-    <!--
-    <bean id="myCoach"
-        class="com.luv2code.springdemo.BaseballCoach">
-    </bean>
-    -->
+
     <bean id="myCricketCoach"
           class="com.dawidspring.demo.CricketCoach">
             <property name="fortuneService" ref="randomFortuneService" />
