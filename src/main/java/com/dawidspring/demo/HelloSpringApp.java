@@ -11,5 +11,6 @@ public class HelloSpringApp {
         System.out.println(theCoach.getDailyWorkout());
         System.out.println(theCoach.getEmailAddress());
         System.out.println(theCoach.getTeam());
+        System.out.println("for tests");
     }
 }
