@@ -7,28 +7,19 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:sport.properties"/>
-    <!-- Define your beans here -->
+
     <bean id="myFortuneService"
           class="com.dawidspring.demo.MyFortuneService">
     </bean>
 
-    <bean id="randomFortuneService"
-          class="com.dawidspring.demo.RandomFortune">
-    </bean>
-    <!-- define the dependency -->
 
     <bean id="myCoach"
-          class="com.dawidspring.demo.FootballCoach">
+          class="com.dawidspring.demo.FootballCoach"
+          scope = "prototype">
     </bean>
 
 
-    <bean id="myCricketCoach"
-          class="com.dawidspring.demo.CricketCoach">
-            <property name="fortuneService" ref="randomFortuneService" />
-            <property name="emailAddress" value="${foo.email}"/>
-            <property name="team" value="${foo.team}"/>
-    </bean>
+
 
 </beans>
 
